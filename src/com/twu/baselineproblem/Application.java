@@ -2,15 +2,28 @@ package com.twu.baselineproblem;
 
 
 public class Application {
-    Console console=new Console();
+    private Console console = new Console();
+    private String[] splitInput;
+    private Converter converter;
 
-    public Application(Console console) {
+    public Application(Console console, Converter converter) {
         this.console = console;
+        this.converter = converter;
     }
 
     public void start() {
         setup();
-        String input=console.getUserInput();
+        String input = console.getUserInput();
+        splitInput(input);
+        for (String aSplitInput : splitInput) {
+            converter.toCharacterArray(aSplitInput);
+        }
+
+
+    }
+
+    private void splitInput(String input) {
+        splitInput = input.split("\n");
     }
 
     private void setup() {
@@ -21,4 +34,5 @@ public class Application {
             }
         }
     }
+
 }
