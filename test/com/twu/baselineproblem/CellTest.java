@@ -43,4 +43,16 @@ public class CellTest {
         Cell cell = new Cell('Y');
         assertFalse(cell.hasValidState());
     }
+
+    @Test
+    public void shouldHasStateAlive() {
+        Cell cell = new Cell('X');
+        assertTrue(cell.hasValidState());
+    }
+
+    @Test
+    public void shouldHasStateDead() {
+        Cell cell = new Cell('-');
+        assertTrue(cell.hasValidState());
+    }
 }
