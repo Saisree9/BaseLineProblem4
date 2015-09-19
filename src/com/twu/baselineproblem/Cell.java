@@ -18,4 +18,9 @@ public class Cell {
         return this.state.equals(thatCell.state);
     }
 
+    @Override
+    public int hashCode() {
+        return state != null ? state.hashCode() : 0;
+    }
+
 }
