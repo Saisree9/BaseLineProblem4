@@ -5,20 +5,11 @@ import java.util.List;
 
 public class Application {
     public void start() {
-        List<List<Cell>> twoDimensionalCells=new ArrayList<>();
-        List<Cell> rowOneCells=new ArrayList<>();
-        rowOneCells.add(new Cell('X'));
-        rowOneCells.add(new Cell('X'));
-        rowOneCells.add(new Cell('-'));
-        rowOneCells.add(new Cell('X'));
-        List<Cell> rowTwoCells=new ArrayList<>();
-        rowTwoCells.add(new Cell('-'));
-        rowTwoCells.add(new Cell('X'));
-        rowTwoCells.add(new Cell('X'));
-        rowTwoCells.add(new Cell('-'));
-        twoDimensionalCells.add(rowOneCells);
-        twoDimensionalCells.add(rowTwoCells);
-        
-
+        Cell[][] twoDimensionalCells = new Cell[4][4];
+        for (int row = 0; row < 3; row++) {
+            for (int column = 0; column < 3; column++) {
+                twoDimensionalCells[row][column] = new Cell('-');
+            }
+        }
     }
 }

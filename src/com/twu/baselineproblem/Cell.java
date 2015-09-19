@@ -2,7 +2,7 @@ package com.twu.baselineproblem;
 
 //cell has state which defines ,is it alive or dead
 public class Cell {
-    Character state;
+    private Character state;
 
     public Cell(char state) {
         this.state = state;
