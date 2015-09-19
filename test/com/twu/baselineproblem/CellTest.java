@@ -11,4 +11,10 @@ public class CellTest {
         Cell cell = new Cell("Alive");
         assertEquals(cell, cell);
     }
+
+    @Test
+    public void shouldNotEqualToNull() {
+        Cell cell = new Cell("Alive");
+        assertNotEquals(null, cell);
+    }
 }
