@@ -17,4 +17,11 @@ public class CellTest {
         Cell cell = new Cell("Alive");
         assertNotEquals(null, cell);
     }
+
+    @Test
+    public void shouldEqualToOtherCellOnlyWhenStateOfTheCellIsSame() {
+        Cell cell1 = new Cell("Alive");
+        Cell cell2 = new Cell("Alive");
+        assertEquals(cell1, cell2);
+    }
 }

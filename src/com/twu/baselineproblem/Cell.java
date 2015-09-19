@@ -12,7 +12,10 @@ public class Cell {
     public boolean equals(Object that) {
         if (this == that) return true;
         if (that == null || getClass() != that.getClass()) return false;
-        return false;
+
+        Cell thatCell = (Cell) that;
+
+        return this.state.equals(thatCell.state);
     }
 
 }
