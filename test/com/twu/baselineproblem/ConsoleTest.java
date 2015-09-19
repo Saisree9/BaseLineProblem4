@@ -11,7 +11,7 @@ import static org.junit.Assert.assertEquals;
 public class ConsoleTest {
 
     private final ByteArrayOutputStream output = new ByteArrayOutputStream();
-    private final ByteArrayInputStream inputStream = new ByteArrayInputStream("something".getBytes());
+    private final ByteArrayInputStream inputStream = new ByteArrayInputStream("something\nSome\n!".getBytes());
 
     @Test
     public void shouldDisplayTheGivenStringInputToDisplay() {
@@ -26,7 +26,7 @@ public class ConsoleTest {
     public void shouldReadInputFromUser() {
         System.setIn(inputStream);
         Console input = new Console();
-        assertEquals("something", input.getUserInput());
+        assertEquals("something\nSome\n", input.getUserInput());
     }
 }
 
