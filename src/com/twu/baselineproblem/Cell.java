@@ -2,9 +2,9 @@ package com.twu.baselineproblem;
 
 //cell has state which defines ,is it alive or dead
 public class Cell {
-    String state;
+    Character state;
 
-    public Cell(String state) {
+    public Cell(char state) {
         this.state = state;
     }
 
@@ -23,4 +23,7 @@ public class Cell {
         return state != null ? state.hashCode() : 0;
     }
 
+    public boolean hasValidState() {
+        return this.state == 'X' || this.state == '-';
+    }
 }
